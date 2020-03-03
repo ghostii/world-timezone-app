@@ -20,6 +20,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	region : attributes.uriParams.region
 }]]]></http:uri-params>
 		</http:request>
-		<logger level="INFO" doc:name="Logger" doc:id="8c8e0f92-b583-492a-a9b6-a7510cb60d3e" message="#[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="8c8e0f92-b583-492a-a9b6-a7510cb60d3e" message="Build Successfully !"/>
 	</flow>
 </mule>
