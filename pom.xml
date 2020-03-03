@@ -30,7 +30,7 @@
 				<username>syadav02</username>
 				<environment>Sandbox</environment>
 				<workerType>Micro</workerType>
-				<applicationName>worldtimezone-service</applicationName>
+				<applicationName>worldtimezone-service-sg</applicationName>
 				<password>Always@2020</password>
 				<muleVersion>4.2.2</muleVersion>
 				</cloudHubDeployment>
