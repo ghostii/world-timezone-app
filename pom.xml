@@ -27,6 +27,7 @@
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>
+				<objectStoreV2>true</objectStoreV2>
 				<username>syadav02</username>
 				<environment>Sandbox</environment>
 				<workerType>Micro</workerType>
