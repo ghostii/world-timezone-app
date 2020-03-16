@@ -28,11 +28,11 @@
 				<configuration>
 				<cloudHubDeployment>
 				<objectStoreV2>true</objectStoreV2>
-				<username>syadav02</username>
+				<username>Shubham_raj</username>
 				<environment>Sandbox</environment>
 				<workerType>Micro</workerType>
 				<applicationName>worldtimezone-service-sg</applicationName>
-				<password>Always@2020</password>
+				<password>Dec@2020</password>
 				<muleVersion>4.2.2</muleVersion>
 				</cloudHubDeployment>
 				</configuration>
