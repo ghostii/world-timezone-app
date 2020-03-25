@@ -8,7 +8,14 @@ pipeline
 		}
 		}
 		
-		stage('Deploy Application to Cloudhub'){
+	stages{
+		stage('MUnit Testing'){
+		steps{
+		bat 'mvn test'
+		}
+		}
+		
+	stage('Deploy Application to Cloudhub'){
 		steps{
 		bat 'mvn package deploy -DmuleDeploy'
 		}
