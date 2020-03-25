@@ -8,14 +8,8 @@
 		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
 		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
 	<munit:config name="world-demo-api-test-suite.xml" />
-	<flow name="world-demo-api-test-suiteFlow" doc:id="d5f921a4-075d-4f82-9689-317282eed599" >
-		<munit:set-event doc:name="Set Event" doc:id="bee4397f-5aa6-4615-a01a-62229ec8cfb5">
-				<munit:attributes value="#[{uriParams:{region:'Asia',city:'Kolkata'}}]" />
-			</munit:set-event>
-	</flow>
 	<munit:test name="world-demo-api-test-suite-world-demo-apiFlowTest" doc:id="cbfa0ee6-c68e-4086-8bff-38d7fd855e97" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow Reference" doc:id="fa14ec1e-0dcd-441d-a8a2-ceeaee899c86" name="world-demo-api-test-suiteFlow"/>
 			<flow-ref doc:name="Flow-ref to world-demo-apiFlow" doc:id="bcb4b5d3-2897-49ea-9a6b-d65cd0cb4733" name="world-demo-apiFlow"/>
 		</munit:execution>
 		<munit:validation >
@@ -24,20 +18,10 @@
 	</munit:test>
 	<munit:test name="world-demo-api-test-suite-world-demo-apiFlowTest1" doc:id="58f367a1-42a0-4545-88ff-44a454998d6d" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow Reference" doc:id="0ff9415d-39a6-444c-9da3-fc48c85abf54" name="world-demo-api-test-suiteFlow"/>
 			<flow-ref doc:name="Flow-ref to world-demo-apiFlow" doc:id="6c64b1f5-7f3e-4817-8d4e-b2df171023f3" name="world-demo-apiFlow"/>
 		</munit:execution>
 		<munit:validation >
 			<munit-tools:assert-that doc:name="Assert that" doc:id="552e7a3d-7240-4730-a302-fbd660f7f899" is="#[MunitTools::withMediaType('application/json')]" expression="#[payload]" message="Media Type is Incorrect"/>
-		</munit:validation>
-	</munit:test>
-	<munit:test name="world-demo-api-test-suite-world-demo-apiFlowTest2" doc:id="05c40706-cb0f-4dd2-9138-f534da2ce395" description="Test">
-		<munit:execution >
-			<flow-ref doc:name="Flow Reference" doc:id="fd8dc030-882e-4ba2-b5d2-31dfd3adce76" name="world-demo-api-test-suiteFlow"/>
-			<flow-ref doc:name="Flow-ref to world-demo-apiFlow" doc:id="02d9e745-1e20-45ed-b04c-b97c209792d9" name="world-demo-apiFlow"/>
-		</munit:execution>
-		<munit:validation >
-			<munit-tools:assert-that doc:name="Assert that" doc:id="2799dc42-7f1d-48f4-a6f3-fd2b74cff11d" is="#[MunitTools::equalTo(false)]" expression="#[payload.dst]" message="dst value is not correct"/>
 		</munit:validation>
 	</munit:test>
 
